@@ -1,4 +1,39 @@
 @host = http://localhost:3000
 @urlMovies = /api/movies
+@urlCharacters = /api/characters
 
+############# MOVIES ###########
+### GET MOVIES
 GET {{host}}{{urlMovies}}
+
+### GET ONE MOVIE
+GET {{host}}{{urlMovies}}/1
+
+###
+POST {{host}}{{urlMovies}}/newMovie
+Content-Type: application/json
+
+{
+    "title": "Harry Potter and the Deathly Hallows 2nd part",
+    "year": "2011",
+    "image": "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
+}
+
+###
+PUT {{host}}{{urlMovies}}
+
+####
+DELETE {{host}}{{urlMovies}}/12
+
+
+
+
+############# Characters ###########
+
+GET {{host}}{{urlCharacters}}
+
+POST {{host}}{{urlCharacters}}
+
+PUT {{host}}{{urlCharacters}}
+
+DELETE {{host}}{{urlCharacters}}
