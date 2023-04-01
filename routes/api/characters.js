@@ -39,7 +39,7 @@ router.post('/newCharacter', async (req, res) => {
 router.put('/:characterId', async (req, res) => {
     const { characterId } = req.params;
     try {
-        const [character] = await updateById(characterId, req.body)
+        await updateById(characterId, req.body)
         const [updatedCharacter] = await getCharacterById(characterId)
         res.json(updatedCharacter[0]);
     } catch (err) {
