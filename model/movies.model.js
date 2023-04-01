@@ -6,7 +6,7 @@ const getAll = () => {
 
 
 const create = ({ title, year, image }) => {
-    return db.query(`INSERT INTO harry_potter. movies
+    return db.query(`INSERT INTO harry_potter.movies
     (title,
     year,
     image)

@@ -30,10 +30,34 @@ DELETE {{host}}{{urlMovies}}/12
 
 ############# Characters ###########
 
+### GET Characters
 GET {{host}}{{urlCharacters}}
 
-POST {{host}}{{urlCharacters}}
+### GET ONE MOVIE
+GET {{host}}{{urlCharacters}}/1
 
-PUT {{host}}{{urlCharacters}}
+###
+POST {{host}}{{urlCharacters}}/newCharacter
+Content-Type: application/json
 
-DELETE {{host}}{{urlCharacters}}
+{
+    "name": "Draco Malfoy",
+    "type": "villain",
+    "image": "https://noelialopezcheda.files.wordpress.com/2015/12/una-foto-promo-di-draco-malfoy-tom-felton-per-il-film-harry-potter-e-la-pietra-filosofale-129105.jpg?w=640",
+    "status": "alive"
+}
+
+###
+PUT {{host}}{{urlCharacters}}/11
+Content-Type: application/json
+
+{
+    "name":"Draco Malfoy",
+    "type": "villain",
+    "image":"https://noelialopezcheda.files.wordpress.com/2015/12/una-foto-promo-di-draco-malfoy-tom-felton-per-il-film-harry-potter-e-la-pietra-filosofale-129105.jpg?w=640",
+    "status": "alive"
+}
+
+
+####
+DELETE {{host}}{{urlCharacters}}/10
