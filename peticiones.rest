@@ -33,7 +33,7 @@ DELETE {{host}}{{urlMovies}}/12
 ### GET Characters
 GET {{host}}{{urlCharacters}}
 
-### GET ONE MOVIE
+### GET ONE CHARACTER
 GET {{host}}{{urlCharacters}}/1
 
 ###
