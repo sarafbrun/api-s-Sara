@@ -2,9 +2,13 @@
 @urlMovies = /api/movies
 @urlCharacters = /api/characters
 
+@urlUsers = /api/users
+
 ############# MOVIES ###########
 ### GET MOVIES
 GET {{host}}{{urlMovies}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE3NDc2NTIsImlhdCI6MTY4MTMxNTY1Mn0.URvAfLgqCfy-H1z7k7O39Xx_-JVUKhLk5OFa_MC9r-U
+
 
 ### GET ONE MOVIE
 GET {{host}}{{urlMovies}}/1
@@ -32,6 +36,7 @@ DELETE {{host}}{{urlMovies}}/12
 
 ### GET Characters
 GET {{host}}{{urlCharacters}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE3NDc2NTIsImlhdCI6MTY4MTMxNTY1Mn0.URvAfLgqCfy-H1z7k7O39Xx_-JVUKhLk5OFa_MC9r-U
 
 ### GET ONE CHARACTER
 GET {{host}}{{urlCharacters}}/1
@@ -61,3 +66,26 @@ Content-Type: application/json
 
 ####
 DELETE {{host}}{{urlCharacters}}/10
+
+
+
+####### USERS #######
+POST {{host}}{{urlUsers}}/registro
+Content-Type: application/json
+
+{
+    "username": "cristina_98",
+    "email": "cristina_98@gmail.com",
+    "password": "cristina_98"
+}
+
+
+### POST LOGIN
+POST {{host}}{{urlUsers}}/login
+Content-Type: application/json
+
+{
+    "email": "cristina_98@gmail.com",
+    "password": "cristina_98"
+}
+
